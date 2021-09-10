@@ -1,0 +1,7 @@
+﻿@model TodoList.Models.TodoItem
+
+<form asp-action="AddItem" method="POST">
+    <label asp-for="Title">Add a new item:</label>
+    <input asp-for="Title" autofocus />
+    <button type="submit">Enviar</button>
+</form>

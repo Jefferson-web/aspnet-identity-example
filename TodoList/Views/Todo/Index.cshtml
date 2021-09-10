@@ -1,0 +1,28 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Is Done</th>
+            <th>Title</th>
+            <th>DueAt</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <form asp-action="MarkDone" method="POST">
+                        <input type="checkbox" class="done-checkbox" style="cursor: pointer" />
+                        <input type="hidden" name="id" value="@item.Id" />
+                    </form>
+                </td>
+                <td>@item.Title</td>
+                <td>@item.DueAt</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="my-3">
+    @await Html.PartialAsync("AddItemPartial", new TodoItem())
+</div>
+

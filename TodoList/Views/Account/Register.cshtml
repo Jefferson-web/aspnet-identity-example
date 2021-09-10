@@ -1,0 +1,9 @@
+﻿@model TodoList.Models.RegisterModelView
+
+<div asp-validation-summary="All" style="color: tomato"></div>
+
+<form class="card" asp-action="Register">
+    <input asp-for="Email" type="text" placeholder="Username" />
+    <input asp-for="Password" type="password" placeholder="Password" />
+    <input type="submit" value="Register" />
+</form>

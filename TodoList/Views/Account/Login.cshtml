@@ -1,0 +1,10 @@
+﻿@model TodoList.Models.LoginModelView
+
+<div asp-validation-summary="All" style="color: tomato"></div>
+
+<form asp-action="Login" method="post">
+    <input asp-for="Email" type="text" placeholder="Email" />
+    <input asp-for="Password" type="password" placeholder="Password" />
+    <input type="submit" value="Login" />
+</form>
+
